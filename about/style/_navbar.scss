@@ -1,0 +1,47 @@
+.nav{
+    width: 100%;
+    height: 96px;
+    @include FlexStyle;   
+
+    &__left{
+        width: 417px;
+        height: 96px;
+        @include FlexStyle;        
+    }
+
+    &__right{
+        @include FlexStyle;
+        width: 185px;
+        height: 96px;
+
+        .button{
+            @include Button;
+        }
+
+        .button:hover{
+           @include ButtonHover;
+        }
+    }
+}
+
+.ul{
+    @include FlexStyle;
+    width: 249px;
+
+    &__li{
+        list-style-type: none;
+
+        a{
+            text-decoration: none;
+            @include FourthHeading;
+            font-size: 15px;
+            color: #939CAA;           
+            
+        }
+
+        a:hover{
+            color:$Yellow;
+        }
+    }
+}
+

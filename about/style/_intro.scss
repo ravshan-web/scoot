@@ -1,0 +1,13 @@
+#intro{
+    margin-top: 96px;
+    background-image: url(../../images/pictures/about/Bitmap@2x.png)  ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 200px;
+
+    .intro-title{
+        @include PrimaryHeading;
+        color: #fff;
+        padding-top: 72px;
+    }
+}

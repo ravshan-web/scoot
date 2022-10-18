@@ -1,0 +1,29 @@
+#your-location{
+    margin-top: 120px;
+    min-height: 100px;
+}
+
+.message-us{
+    max-width: 100%;
+    min-height: 100px;
+    @include FlexStyle;
+
+    h2{
+        @include SecondaryHeading;
+        max-width: 300px;
+        letter-spacing: -2.41px;
+    }
+
+    p{
+        @include Paragraph;
+        max-width: 445px;
+    }
+
+    a{
+        @include Button;
+    }
+
+    a:hover{
+        @include ButtonHover;
+    }
+}

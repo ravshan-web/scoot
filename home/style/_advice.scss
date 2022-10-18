@@ -1,0 +1,118 @@
+#advice{
+    margin-top: 200px;
+    width: 100%;
+    height: 1655px;
+    overflow: hidden;
+}
+
+.arrowline-1{
+    position: absolute;
+    z-index: 99;
+    right: -200px;
+    top: 300px;
+    transform: scale(1.1);
+}
+
+.arrowline-2{
+    position: absolute;
+    z-index: 99;
+    top: 600px;
+    left: -550px;
+}
+
+.arrowline-3{
+    position: absolute;
+    z-index: 99;
+    top: 1280px;
+    right: -545px;
+}
+
+.circle-1{
+    position: absolute;
+    width: 445px;
+    height: 445px;
+    z-index: 9;
+    right: -545px;
+    // top: 10px;
+    background-color: $LightGrey;
+    border-radius: 50%;
+}
+.circle-2{
+    position: absolute;
+    width: 445px;
+    height: 445px;
+    z-index: 9;
+    top: 600px;
+    left: -550px;
+    background-color: $LightGrey;
+    border-radius: 50%;
+}
+.circle-3{
+    position: absolute;
+    width: 445px;
+    height: 445px;
+    z-index: 9;
+    top: 1210px;
+    right: -545px;
+    background-color: $LightGrey;
+    border-radius: 50%;
+}
+
+.advice{
+    width: 1106px;
+    height: 1655px;
+    @include FlexStyle;
+    flex-direction: column;
+    position: relative;
+   
+
+    .wrapper{
+        width: 100%;
+        height: 450px;
+        @include FlexStyle;
+
+        .desc{
+            max-width: 445px;
+            // max-width: 313px;
+
+            h2{
+                @include SecondaryHeading;
+                width: 445px;
+                letter-spacing: -2.15px;
+            }
+
+            p{
+                @include Paragraph;
+                color: $DimGrey;
+                margin-top: 24px;
+                width: 445px;
+                margin-bottom: 60px
+            }
+
+            a{
+                @include Button;
+                box-sizing: content-box;
+            }
+
+            a:hover{
+                @include ButtonHover;
+            }
+        }
+
+        .img{
+            width: 445px;
+            height: 445px;
+            display: inline-block;
+            border-radius: 50%;
+            overflow: hidden;
+            
+
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+

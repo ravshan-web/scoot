@@ -1,0 +1,35 @@
+#footer{
+    background-color: #333A44;
+    height: 96px;
+}
+
+.footer{
+    @include FlexStyle;
+
+    &__left{
+        height: 96px;
+        // padding-top: 35px;
+        width: 417px;
+        @include FlexStyle;
+    }
+
+    &__right{
+        width: 130px;
+        @include FlexStyle;
+        height: 96px;
+
+        a{
+            text-decoration: none;
+        }
+
+        .bx{
+            color: $Yellow;
+            font-size: 30px;
+        }
+
+        .bx:hover{
+            color: #fff;
+            font-size: 30px;
+        }
+    }
+}

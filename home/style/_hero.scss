@@ -1,0 +1,56 @@
+#hero{
+    max-width: 100%;
+    height: 295px;
+    margin-top: 160px;
+}
+
+.hero{
+    position: relative;
+}
+
+.grey-line{
+    width: 974px;
+    background-color: #E5ECF4;
+    border: 15px solid #E5ECF4;
+    position: absolute;
+    z-index: -5;
+    top: 34px;
+    left: -210px;
+}
+
+.wrapper{
+    position: relative;
+    max-width: 100%;
+    @include FlexStyle;
+
+    &__card{
+        width: 350px;
+        height: 295px;
+        @include FlexStyle;
+        flex-direction: column;
+        align-items: flex-start;
+
+        .image{
+            width: 96px;
+            height: 96px;
+        }
+
+        .desc{
+            width: 100%;
+            height: 155px;
+            @include FlexStyle;
+            flex-direction: column;
+            align-items: flex-start;
+
+            h2{
+                @include FourthHeading;
+            }
+            
+            p{
+                @include Paragraph;
+                color: $DimGrey;
+            }
+        }
+    }
+}
+

@@ -1,0 +1,20 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&family=Space+Mono:wght@400;700&display=swap');
+@import "./global_scss/normalize";
+@import "./global_scss/variables";
+@import "./global_scss/fonts";
+@import "./global_scss/generals";
+@import "./global_scss/extends";
+@import "./global_scss/mixins";
+
+// PAGES STYLES
+
+@import "../careers/style/container";
+@import "../careers/style/header";
+@import "../careers/style/navbar";
+@import "../careers/style/intro";
+@import "../careers/style/advice";
+@import "..//careers/style/explain";
+@import "../careers/style/vacancy";
+@import "../careers/style/zero";
+@import "../careers/style/footer";

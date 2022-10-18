@@ -1,0 +1,109 @@
+#faq{
+    max-width: 100%;
+    min-height: 990px;
+    margin-top: 120px;
+}
+
+.faq{
+    max-width: 100%;
+    min-height: 990px;
+
+    &__title{
+        @include FlexStyle;
+        justify-content: center ;
+        width: 100%;
+        
+        h2{
+            @include SecondaryHeading;
+            letter-spacing: -2.14286px;
+            max-width: 540px;
+        height: 48px;
+        }
+    }
+
+    &__question{
+        margin-top: 64px;
+        margin-bottom: 20px;
+        width: 100%;
+        @include FlexStyle;
+        
+        &--leftside{
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            max-width: 350px;   
+            height: 400px;
+            // background-color: rgb(255, 221, 221);
+
+            h3{
+                @include ThirdHeading;
+                letter-spacing: -1.78571px;
+            }
+        }
+
+        &--rightside{
+            min-width: 730px;
+            height: 400px;
+            // background-color: rgb(200, 201, 255);
+
+            .qs-blocks:hover{
+                background-color: #FFF4DF;
+            } 
+
+            .qs-blocks{                
+                max-width: 730px;
+                min-height: 92px;
+                padding: 32px 40px;
+                background-color: $Snow;
+                margin-bottom: 16px;   
+
+                &__title{
+                    @include FlexStyle;
+                    // max-width: 356px;
+
+                    h4{
+                        @include FourthHeading;
+                        letter-spacing: -1.07143px;
+                    }
+
+                    &--toggle{
+                        display: block;
+                        width: 10px;
+                        height: 10px;
+                        border-bottom:3px;
+                        border-right: 3px;
+                        border-left: 0px;
+                        border-top: 0px;
+                        border-color: $Yellow;
+                        border-style: solid;
+                        transform: rotate(-135deg);
+                    }
+
+                    &--toggle2{
+                        display: block;
+                        width: 10px;
+                        height: 10px;
+                        border-bottom:3px;
+                        border-right: 3px;
+                        border-left: 0px;
+                        border-top: 0px;
+                        border-color: $Yellow;
+                        border-style: solid;
+                        transform: rotate(45deg);
+                    }
+                }
+
+                &__context{
+                    margin-top: 24px;
+                    p{
+                        @include Paragraph;
+
+                    }
+                }
+            }
+        }
+
+
+    }
+
+}

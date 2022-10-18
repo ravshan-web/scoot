@@ -1,0 +1,82 @@
+//flex style
+@mixin FlexStyle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+//Headings
+
+@mixin PrimaryHeading {
+    font-family: 'Space Mono' , monospace;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 56px;
+    color: #495567;
+}
+
+@mixin SecondaryHeading {
+    font-family: 'Space Mono' , monospace;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 48px;
+    color: #495567;
+}
+
+@mixin ThirdHeading{
+    font-family: 'Space Mono', monospace;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    color: #495567;
+}
+
+@mixin FourthHeading{
+    font-family: 'Space Mono' , monospace;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: #495567;
+}
+
+// Paragraph <p></p>
+
+@mixin Paragraph {
+    font-family: 'Lexend Deca', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    color: #495567;
+}
+
+// Buttons
+
+@mixin Button{
+    padding: 14px 39px;
+    background-color: #FCB72B;
+    // line-height: 25px;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: 'Space Mono' , monospace;
+    color: #fff; 
+    text-decoration: none;   
+    border: 3px solid #FCB72B;
+}
+
+@mixin ButtonHover{
+    padding: 14px 39px;
+    background-color: transparent;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: 'Space Mono' , monospace;
+    color: #FCB72B; 
+    text-decoration: none;   
+    border: 3px solid #FCB72B;
+    transition: all 0.2s ease;
+}

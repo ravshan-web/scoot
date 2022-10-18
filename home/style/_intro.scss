@@ -1,0 +1,52 @@
+#intro{
+    height: 650px;
+    background:url(../../images/pictures/intro/Bitmap.webp) no-repeat;
+    background-size: cover;
+    margin-top: 96px;
+    
+}
+.intro-context{
+    position: relative;
+}
+
+.h1{
+    position: absolute;
+    top: 125px;
+    @include PrimaryHeading;
+    color: #fff;
+    max-width: 500px;
+    letter-spacing: -2.5px;
+}
+
+.p{
+    position: absolute;
+    top: 325px;
+    left: 100px;
+    width: 405px;
+    height: 100px;
+    @include Paragraph;
+    color: #fff;
+}
+
+.btn{
+    @include Button;
+    position: absolute;
+    top: 470px;
+    left: 100px;
+}
+
+.btn:hover{
+    @include ButtonHover;
+}
+
+.line1{
+    position: absolute;
+    left: -207px;
+    top: 363px;
+}
+
+.line2{
+    position: absolute;
+    left: 544px;
+    top: 363px;
+}
