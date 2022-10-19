@@ -1,6 +1,5 @@
 #our-values{
     margin-top: 150px;
-    height: 608px;
     width: 100%;
     overflow: hidden;
 }
@@ -66,4 +65,319 @@
         }
     }
 }
+
+// RWD 992px ==================================
+
+
+@media only screen and (max-width:992px){
+    #our-values{
+        margin-top: 150px;
+        // height: 608px;
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .our-values{
+        margin: 0 auto;
+        width: 457px;
+        @include FlexStyle;
+        flex-direction: column;
+    
+        .title{
+            text-align: center;
+            h2{
+                @include SecondaryHeading;
+                letter-spacing: -2.14286px;
+            }
+        }
+    
+        .wrapper{
+            @include FlexStyle;
+            flex-direction: column;
+            width: 100%;
+           
+    
+            &__card{
+                width: 350px;
+                @include FlexStyle;
+                justify-content: space-between;
+                flex-direction: column;
+                // background-color: rgba(255, 228, 228, 0.63);               
+                position: relative;
+                margin: 60px auto 0 auto;
+    
+                &--img, img{
+                    width: 240px;
+                    height: 240px;
+                    border-radius: 50%;       
+                }
+    
+                .number{
+                    position: absolute;
+                    display: block;
+                    z-index: 11;
+                    width: 96px; height: 96px;
+                    background-color: $Yellow;
+                    @include FourthHeading;
+                    @include FlexStyle; 
+                    justify-content: center;
+                    top: 217px;
+                    border-radius: 50%;
+                }
+    
+                &--text{
+                    text-align: center;
+                    h3{
+                        @include FourthHeading; 
+                        margin-bottom: 27px
+                    }
+    
+                    p{
+                        @include Paragraph;
+                        color: $DimGrey;
+                    }
+                }
+            }
+        }
+    }
+    
+    
+}
+
+
+// RWD 768px ==================================
+
+
+@media only screen and (max-width:768px){
+    #our-values{
+        margin-top: 150px;
+        // height: 608px;
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .our-values{
+        margin: 0 auto;
+        width: 457px;
+        @include FlexStyle;
+        flex-direction: column;
+    
+        .title{
+            text-align: center;
+            h2{
+                @include SecondaryHeading;
+                letter-spacing: -2.14286px;
+            }
+        }
+    
+        .wrapper{
+            @include FlexStyle;
+            flex-direction: column;
+            width: 100%;
+           
+    
+            &__card{
+                width: 350px;
+                @include FlexStyle;
+                justify-content: space-between;
+                flex-direction: column;
+                // background-color: rgba(255, 228, 228, 0.63);               
+                position: relative;
+                margin: 60px auto 0 auto;
+    
+                &--img, img{
+                    width: 240px;
+                    height: 240px;
+                    border-radius: 50%;       
+                }
+    
+                .number{
+                    position: absolute;
+                    display: block;
+                    z-index: 11;
+                    width: 96px; height: 96px;
+                    background-color: $Yellow;
+                    @include FourthHeading;
+                    @include FlexStyle; 
+                    justify-content: center;
+                    top: 217px;
+                    border-radius: 50%;
+                }
+    
+                &--text{
+                    text-align: center;
+                    h3{
+                        @include FourthHeading; 
+                        margin-bottom: 27px
+                    }
+    
+                    p{
+                        @include Paragraph;
+                        color: $DimGrey;
+                    }
+                }
+            }
+        }
+    }
+    
+    
+}
+
+
+// RWD 576px ==================================
+
+
+@media only screen and (max-width:576px){
+    #our-values{
+        margin-top: 150px;
+        // height: 608px;
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .our-values{
+        margin: 0 auto;
+        width: 311px;
+        @include FlexStyle;
+        flex-direction: column;
+    
+        .title{
+            text-align: center;
+            h2{
+                @include SecondaryHeading;
+                letter-spacing: -2.14286px;
+            }
+        }
+    
+        .wrapper{
+            @include FlexStyle;
+            flex-direction: column;
+            width: 100%;
+           
+    
+            &__card{
+                width: 350px;
+                @include FlexStyle;
+                justify-content: space-between;
+                flex-direction: column;
+                // background-color: rgba(255, 228, 228, 0.63);               
+                position: relative;
+                margin: 60px auto 0 auto;
+    
+                &--img, img{
+                    width: 240px;
+                    height: 240px;
+                    border-radius: 50%;       
+                }
+    
+                .number{
+                    position: absolute;
+                    display: block;
+                    z-index: 11;
+                    width: 96px; height: 96px;
+                    background-color: $Yellow;
+                    @include FourthHeading;
+                    @include FlexStyle; 
+                    justify-content: center;
+                    top: 217px;
+                    border-radius: 50%;
+                }
+    
+                &--text{
+                    text-align: center;
+                    h3{
+                        @include FourthHeading; 
+                        margin-bottom: 27px
+                    }
+    
+                    p{
+                        @include Paragraph;
+                        color: $DimGrey;
+                    }
+                }
+            }
+        }
+    }
+    
+    
+}
+
+// RWD 375px ==================================
+
+
+@media only screen and (max-width:375px){
+    #our-values{
+        margin-top: 150px;
+        // height: 608px;
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .our-values{
+        margin: 0 auto;
+        width: 357px;
+        @include FlexStyle;
+        flex-direction: column;
+    
+        .title{
+            text-align: center;
+            h2{
+                @include SecondaryHeading;
+                letter-spacing: -2.14286px;
+            }
+        }
+    
+        .wrapper{
+            @include FlexStyle;
+            flex-direction: column;
+            width: 375px;
+           
+    
+            &__card{
+                width: 350px;
+                @include FlexStyle;
+                justify-content: space-between;
+                flex-direction: column;
+                // background-color: rgba(255, 228, 228, 0.63);               
+                position: relative;
+                margin: 60px auto 0 auto;
+    
+                &--img, img{
+                    width: 240px;
+                    height: 240px;
+                    border-radius: 50%;       
+                }
+    
+                .number{
+                    position: absolute;
+                    display: block;
+                    z-index: 11;
+                    width: 96px; height: 96px;
+                    background-color: $Yellow;
+                    @include FourthHeading;
+                    @include FlexStyle; 
+                    justify-content: center;
+                    top: 217px;
+                    border-radius: 50%;
+                }
+    
+                &--text{
+                    text-align: center;
+                    h3{
+                        @include FourthHeading; 
+                        margin-bottom: 27px
+                    }
+    
+                    p{
+                        @include Paragraph;
+                        color: $DimGrey;
+                    }
+                }
+            }
+        }
+    }
+    
+    
+}
+
 

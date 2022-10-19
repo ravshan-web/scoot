@@ -6,7 +6,15 @@
     &__left{
         width: 417px;
         height: 96px;
-        @include FlexStyle;        
+        @include FlexStyle;    
+        
+        #menuToggle{
+            display: none;
+        }
+
+        .menu-icon{
+        display: none
+        }       
     }
 
     &__right{
@@ -21,6 +29,7 @@
         .button:hover{
            @include ButtonHover;
         }
+
     }
 }
 
@@ -45,3 +54,301 @@
     }
 }
 
+
+
+
+// RWD 992px ===================
+
+@media only screen and (max-width:992px){
+    .nav{
+        max-width: 992px;
+        height: 96px;
+        @include FlexStyle;   
+        // background-color: aqua;
+    
+        &__left{
+            max-width: 417px;
+            height: 96px;
+            @include FlexStyle;        
+        }
+    
+        &__right{
+            @include FlexStyle;
+            max-width: 185px;
+            height: 96px;
+    
+            .button{
+                @include Button;
+            }
+    
+            .button:hover{
+               @include ButtonHover;
+            }
+        }
+    }
+    
+    .ul{
+        @include FlexStyle;
+        max-width: 249px;
+    
+        &__li{
+            list-style-type: none;
+    
+            a{
+                text-decoration: none;
+                @include FourthHeading;
+                font-size: 15px;
+                color: #939CAA;           
+                
+            }
+    
+            a:hover{
+                color:$Yellow;
+            }
+        }
+    }
+}
+
+// RWD 768px ===================
+
+@media only screen and (max-width:768px){
+    .nav{
+        max-width: 768px;
+        margin:0 auto;
+        height: 96px;
+        @include FlexStyle; 
+        justify-content: space-around;  
+    
+        &__left{
+            width: 400px;
+            height: 96px;
+            @include FlexStyle;        
+        }
+    
+        &__right{
+            @include FlexStyle;
+            justify-content: flex-end;
+            width: 183px;
+            height: 96px;
+    
+            .button{
+                @include Button;
+                padding: 14px 24px;
+            }
+    
+            .button:hover{
+               @include ButtonHover;
+            }
+        }
+    }
+    
+    .ul{
+        @include FlexStyle;
+        max-width: 249px;
+    
+        &__li{
+            list-style-type: none;
+    
+            a{
+                text-decoration: none;
+                @include FourthHeading;
+                font-size: 15px;
+                color: #939CAA;           
+                
+            }
+    
+            a:hover{
+                color:$Yellow;
+            }
+        }
+    }
+}
+
+
+// RWD 576px ===================
+
+@media only screen and (max-width:576px){
+    .nav{
+        max-width: 576px;
+        margin:0 auto;
+        height: auto;
+        position: relative;
+        // @include FlexStyle; 
+        // padding: 0 10px;
+        
+    
+        &__left{
+            max-width: 576px;
+            height: 96px;
+            @include FlexStyle;  
+
+            .logo{
+                position: relative;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                @include FlexStyle;
+                justify-content: center;
+                align-items: center;
+                
+            }
+
+            .ul{
+                background-color: #FCB72B;
+                @include FlexStyle;
+                max-width: 249px;
+                display: none;
+            
+                &__li{
+                    list-style-type: none;
+            
+                    a{
+                        text-decoration: none;
+                        @include FourthHeading;
+                        font-size: 15px;
+                        color: #939CAA;           
+                        
+                    }
+            
+                    a:hover{
+                        color:$Yellow;
+                    }
+                }
+            }
+            
+            #menuToggle:checked ~ ul{
+                background-color: #FCB72B;
+                
+            }
+
+            .menu-icon i {
+                font-size: 42px;
+                color:  #FCB72B;
+            }
+    
+            .menu-icon{
+                width: 100px;
+                height: inherit;
+                display: block;
+                position: absolute;
+                top: 30%;
+                left: 20px;
+                line-height: 42px;
+            }   
+        }
+    
+        &__right{            
+            @include FlexStyle;
+            justify-content: flex-end;
+            display: none;
+            
+            height: 96px;
+    
+            .button{
+                @include Button;
+                padding: 12px 18px;
+                display: none;
+            }
+    
+            .button:hover{
+               @include ButtonHover;
+            }
+        }
+    }
+    
+    
+}
+
+
+
+// RWD 375px ===================
+
+@media only screen and (max-width:375px){
+    .nav{
+        max-width: 375px;
+        margin:0 auto;
+        height: auto;
+        position: relative;
+        // @include FlexStyle; 
+        // padding: 0 10px;
+        
+    
+        &__left{
+            max-width: 375px;
+            height: 96px;
+            @include FlexStyle;  
+
+            .logo{
+                position: relative;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                @include FlexStyle;
+                justify-content: center;
+                align-items: center;
+                
+            }
+
+            .ul{
+                background-color: #FCB72B;
+                @include FlexStyle;
+                max-width: 249px;
+                display: none;
+            
+                &__li{
+                    list-style-type: none;
+            
+                    a{
+                        text-decoration: none;
+                        @include FourthHeading;
+                        font-size: 15px;
+                        color: #939CAA;           
+                        
+                    }
+            
+                    a:hover{
+                        color:$Yellow;
+                    }
+                }
+            }
+            
+            #menuToggle:checked ~ ul{
+                background-color: #FCB72B;
+                
+            }
+
+            .menu-icon i {
+                font-size: 42px;
+                color:  #FCB72B;
+            }
+    
+            .menu-icon{
+                width: 100px;
+                height: inherit;
+                display: block;
+                position: absolute;
+                top: 30%;
+                left: 20px;
+                line-height: 42px;
+            }   
+        }
+    
+        &__right{            
+            @include FlexStyle;
+            justify-content: flex-end;
+            display: none;
+            
+            height: 96px;
+    
+            .button{
+                @include Button;
+                padding: 12px 18px;
+                display: none;
+            }
+    
+            .button:hover{
+               @include ButtonHover;
+            }
+        }
+    }
+}

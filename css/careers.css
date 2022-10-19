@@ -316,11 +316,23 @@ template {
   font-family: "Space Mono", monospace;
   src: url(../../fonts/SpaceMono-Bold.woff);
 }
-* {
+*, *::after, *::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.main {
+  overflow: hidden;
 }
 
 .container {
@@ -359,6 +371,12 @@ header {
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
+}
+.nav__left #menuToggle {
+  display: none;
+}
+.nav__left .menu-icon {
+  display: none;
 }
 .nav__right {
   display: flex;
@@ -415,6 +433,356 @@ header {
   color: #FCB72B;
 }
 
+@media only screen and (max-width: 992px) {
+  .nav {
+    max-width: 992px;
+    height: 96px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
+  .nav__left {
+    max-width: 417px;
+    height: 96px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
+  .nav__right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    max-width: 185px;
+    height: 96px;
+  }
+  .nav__right .button {
+    padding: 14px 39px;
+    background-color: #FCB72B;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: "Space Mono", monospace;
+    color: #fff;
+    text-decoration: none;
+    border: 3px solid #FCB72B;
+  }
+  .nav__right .button:hover {
+    padding: 14px 39px;
+    background-color: transparent;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: "Space Mono", monospace;
+    color: #FCB72B;
+    text-decoration: none;
+    border: 3px solid #FCB72B;
+    transition: all 0.2s ease;
+  }
+  .ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    max-width: 249px;
+  }
+  .ul__li {
+    list-style-type: none;
+  }
+  .ul__li a {
+    text-decoration: none;
+    font-family: "Space Mono", monospace;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: #495567;
+    font-size: 15px;
+    color: #939CAA;
+  }
+  .ul__li a:hover {
+    color: #FCB72B;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .nav {
+    max-width: 768px;
+    margin: 0 auto;
+    height: 96px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .nav__left {
+    width: 400px;
+    height: 96px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
+  .nav__right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 183px;
+    height: 96px;
+  }
+  .nav__right .button {
+    padding: 14px 39px;
+    background-color: #FCB72B;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: "Space Mono", monospace;
+    color: #fff;
+    text-decoration: none;
+    border: 3px solid #FCB72B;
+    padding: 14px 24px;
+  }
+  .nav__right .button:hover {
+    padding: 14px 39px;
+    background-color: transparent;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: "Space Mono", monospace;
+    color: #FCB72B;
+    text-decoration: none;
+    border: 3px solid #FCB72B;
+    transition: all 0.2s ease;
+  }
+  .ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    max-width: 249px;
+  }
+  .ul__li {
+    list-style-type: none;
+  }
+  .ul__li a {
+    text-decoration: none;
+    font-family: "Space Mono", monospace;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: #495567;
+    font-size: 15px;
+    color: #939CAA;
+  }
+  .ul__li a:hover {
+    color: #FCB72B;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .nav {
+    max-width: 576px;
+    margin: 0 auto;
+    height: auto;
+    position: relative;
+  }
+  .nav__left {
+    max-width: 576px;
+    height: 96px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
+  .nav__left .logo {
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .nav__left .ul {
+    background-color: #FCB72B;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    max-width: 249px;
+    display: none;
+  }
+  .nav__left .ul__li {
+    list-style-type: none;
+  }
+  .nav__left .ul__li a {
+    text-decoration: none;
+    font-family: "Space Mono", monospace;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: #495567;
+    font-size: 15px;
+    color: #939CAA;
+  }
+  .nav__left .ul__li a:hover {
+    color: #FCB72B;
+  }
+  .nav__left #menuToggle:checked ~ ul {
+    background-color: #FCB72B;
+  }
+  .nav__left .menu-icon i {
+    font-size: 42px;
+    color: #FCB72B;
+  }
+  .nav__left .menu-icon {
+    width: 100px;
+    height: inherit;
+    display: block;
+    position: absolute;
+    top: 30%;
+    left: 20px;
+    line-height: 42px;
+  }
+  .nav__right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-end;
+    display: none;
+    height: 96px;
+  }
+  .nav__right .button {
+    padding: 14px 39px;
+    background-color: #FCB72B;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: "Space Mono", monospace;
+    color: #fff;
+    text-decoration: none;
+    border: 3px solid #FCB72B;
+    padding: 12px 18px;
+    display: none;
+  }
+  .nav__right .button:hover {
+    padding: 14px 39px;
+    background-color: transparent;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: "Space Mono", monospace;
+    color: #FCB72B;
+    text-decoration: none;
+    border: 3px solid #FCB72B;
+    transition: all 0.2s ease;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .nav {
+    max-width: 375px;
+    margin: 0 auto;
+    height: auto;
+    position: relative;
+  }
+  .nav__left {
+    max-width: 375px;
+    height: 96px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
+  .nav__left .logo {
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .nav__left .ul {
+    background-color: #FCB72B;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    max-width: 249px;
+    display: none;
+  }
+  .nav__left .ul__li {
+    list-style-type: none;
+  }
+  .nav__left .ul__li a {
+    text-decoration: none;
+    font-family: "Space Mono", monospace;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: #495567;
+    font-size: 15px;
+    color: #939CAA;
+  }
+  .nav__left .ul__li a:hover {
+    color: #FCB72B;
+  }
+  .nav__left #menuToggle:checked ~ ul {
+    background-color: #FCB72B;
+  }
+  .nav__left .menu-icon i {
+    font-size: 42px;
+    color: #FCB72B;
+  }
+  .nav__left .menu-icon {
+    width: 100px;
+    height: inherit;
+    display: block;
+    position: absolute;
+    top: 30%;
+    left: 20px;
+    line-height: 42px;
+  }
+  .nav__right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-end;
+    display: none;
+    height: 96px;
+  }
+  .nav__right .button {
+    padding: 14px 39px;
+    background-color: #FCB72B;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: "Space Mono", monospace;
+    color: #fff;
+    text-decoration: none;
+    border: 3px solid #FCB72B;
+    padding: 12px 18px;
+    display: none;
+  }
+  .nav__right .button:hover {
+    padding: 14px 39px;
+    background-color: transparent;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: "Space Mono", monospace;
+    color: #FCB72B;
+    text-decoration: none;
+    border: 3px solid #FCB72B;
+    transition: all 0.2s ease;
+  }
+}
 #intro {
   margin-top: 96px;
   background-image: url(../../images/pictures/careers/Bitmap@2x.png);

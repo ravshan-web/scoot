@@ -1,28 +1,274 @@
-#advice{
-    margin-top: 200px;
-    width: 100%;
-    height: 1050px;
+#advice {
+  margin-top: 200px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.arrowline-1 {
+  position: absolute;
+  z-index: 99;
+  right: -500px;
+  top: 190px;
+}
+
+.arrowline-2 {
+  position: absolute;
+  z-index: 99;
+  top: 550px;
+  left: -800px;
+}
+
+.circle-1 {
+  position: absolute;
+  width: 445px;
+  height: 445px;
+  z-index: 9;
+  right: -545px;
+  top: 0px;
+  background-color: $LightGrey;
+  border-radius: 50%;
+}
+.circle-2 {
+  position: absolute;
+  width: 445px;
+  height: 445px;
+  z-index: 9;
+  top: 600px;
+  left: -550px;
+  background-color: $LightGrey;
+  border-radius: 50%;
+}
+
+.advice {
+    max-width: 1106px;
+    display: grid;
+    grid-template-columns: 40% 40%;
+    // grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: auto;
+    grid-row-gap: 60px;
+    grid-column-gap: 23px;
+    justify-content: space-between;
+    grid-row-gap: 160px;
+    position: relative;
+    align-items: center;
+    grid-template-areas:
+    "context--1 img--1"
+    "img--2 context--2";
+    }
+
+  .context--1 {
+    order: 1;
+    grid-area: "context--1" ;
+  }
+
+  .context--2 {
+    order: 4;
+    grid-area: "context--2" ;
+  }
+
+  .img--1 {
+    order: 2;
+    grid-area: "img--1";
+  }
+
+  .img--2 {
+    order: 3;
+    grid-area: "img--2";
+
+  }
+
+  .context {
+    max-width: 573px;
+    height: 195px;
+    @include FlexStyle;
+    align-items: flex-start;
+    flex-direction: column;
+
+    h2 {
+      text-align: left;
+      @include SecondaryHeading;
+      width: 457px;
+      letter-spacing: -2.15px;
+    }
+
+    p {
+      text-align: left;
+      @include Paragraph;
+      color: $DimGrey;
+      width: 445px;
+    }
+
+    a {
+      @include Button;
+      box-sizing: content-box;
+    }
+
+    a:hover {
+      @include ButtonHover;
+    }
+  }
+
+  .img {
+    width: 445px;
+    height: 445px;
+    display: inline-block;
+    border-radius: 50%;
     overflow: hidden;
-}
 
-.arrowline-1{
+    img {
+      width: 100%;
+    }
+  }
+
+
+//RWD 992px ======================
+
+@media only screen and (max-width: 992px) {
+  #advice {
+    margin-top: 150px;
+    max-width: 992px;
+  }
+
+  .arrowline-1 {
     position: absolute;
     z-index: 99;
-    right: -200px;
-    top: 260px;
-    transform: scale(1.1);
-}
+    right: -100px;
+    top: 200px;
+  }
 
-.arrowline-2{
+  .arrowline-2 {
     position: absolute;
     z-index: 99;
+    top: 850px;
+    left: -550px;
+  }
+
+  .circle-1 {
+    position: absolute;
+    width: 445px;
+    height: 445px;
+    z-index: 9;
+    right: -545px;
+    background-color: $LightGrey;
+    border-radius: 50%;
+  }
+  .circle-2 {
+    position: absolute;
+    width: 445px;
+    height: 445px;
+    z-index: 9;
     top: 600px;
     left: -550px;
+    background-color: $LightGrey;
+    border-radius: 50%;
+  }
+
+  .advice {
+    max-width: 992px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: auto;
+    grid-row-gap: 60px;
+    position: relative;
+    margin: 0 auto;
+    justify-items: center;
+    grid-template-areas:
+    "img--1"
+    "context--1"
+    "img--2"
+    "context--2";
+     
+  }
+
+  .context--1 {
+    order: 2;
+    grid-area: "context--1" ;
+  }
+
+  .context--2 {
+    order: 4;
+    grid-area: "context--2" ;
+  }
+
+  .img--1 {
+    order: 1;
+    grid-area: "img--1";
+  }
+
+  .img--2 {
+    order: 3;
+    grid-area: "img--2";
+
+  }
+
+  .context {
+    max-width: 573px;
+    height: 231px;
+    @include FlexStyle;
+    flex-direction: column;
+
+    h2 {
+      text-align: center;
+      @include SecondaryHeading;
+      width: 457px;
+      letter-spacing: -2.15px;
+    }
+
+    p {
+      text-align: center;
+      @include Paragraph;
+      color: $DimGrey;
+      width: 573px;
+    }
+
+    a {
+      @include Button;
+      box-sizing: content-box;
+    }
+
+    a:hover {
+      @include ButtonHover;
+    }
+  }
+
+  .img {
+    width: 445px;
+    height: 445px;
+    display: inline-block;
+    border-radius: 50%;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+    }
+  }
 }
 
+//RWD 768px ======================
 
+@media only screen and (max-width: 768px) {
+  #advice {
+    margin-top: 150px;
+    max-width: 768px;
+    // overflow: hidden;
+  }
 
-.circle-1{
+  .arrowline-1 {
+    position: absolute;
+    z-index: 99;
+    right: 0px;
+    top: 250px;
+  }
+
+  .arrowline-2 {
+    position: absolute;
+    z-index: 99;
+    top: 800px;
+    left: -400px;
+  }
+
+  .circle-1 {
     position: absolute;
     width: 445px;
     height: 445px;
@@ -31,8 +277,8 @@
     // top: 10px;
     background-color: $LightGrey;
     border-radius: 50%;
-}
-.circle-2{
+  }
+  .circle-2 {
     position: absolute;
     width: 445px;
     height: 445px;
@@ -41,63 +287,212 @@
     left: -550px;
     background-color: $LightGrey;
     border-radius: 50%;
-}
+  }
 
-.advice{
-    width: 1106px;
-    height: 1050px;
-    @include FlexStyle;
-    flex-direction: column;
-    position: relative;
-   
-
-    .wrapper{
-        width: 100%;
-        height: 450px;
-        @include FlexStyle;
-
-        .desc{
-            max-width: 445px;
-            // max-width: 313px;
-
-            h2{
-                @include SecondaryHeading;
-                width: 445px;
-                letter-spacing: -2.15px;
-            }
-
-            p{
-                @include Paragraph;
-                color: $DimGrey;
-                margin-top: 24px;
-                width: 445px;
-                margin-bottom: 60px
-            }
-
-            a{
-                @include Button;
-                box-sizing: content-box;
-            }
-
-            a:hover{
-                @include ButtonHover;
-            }
-        }
-
-        .img{
-            width: 445px;
-            height: 445px;
-            display: inline-block;
-            border-radius: 50%;
-            overflow: hidden;
-            
-
-            img{
-                width: 100%;
-            }
-        }
+    .advice {
+      max-width: 768px;
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: repeat(4, 1fr);
+      grid-column-gap: auto;
+      grid-row-gap: 60px;
+      position: relative;
+      margin: 0 auto;
+      justify-items: center;
+      grid-template-areas:
+        "img--1"
+        "context--1"
+        "img--2"
+        "context--2";
     }
-}
+
+    .context--1 {
+      order: 2;
+      grid-area: "context--1" ;
+    }
+
+    .context--2 {
+      order: 4;
+      grid-area: "context--2" ;
+    }
+
+    .img--1 {
+      order: 1;
+      grid-area: "img--1";
+    }
+
+    .img--2 {
+      order: 3;
+      grid-area: "img--2";
+
+    }
+
+    .context {
+      max-width: 573px;
+      height: 186px;
+      @include FlexStyle;
+      flex-direction: column;
+
+      h2 {
+        text-align: center;
+        @include SecondaryHeading;
+        width: 457px;
+        letter-spacing: -2.15px;
+      }
+
+      p {
+        text-align: center;
+        @include Paragraph;
+        color: $DimGrey;
+        width: 573px;
+      }
+
+      a {
+        @include Button;
+        box-sizing: content-box;
+      }
+
+      a:hover {
+        @include ButtonHover;
+      }
+    }
+
+    .img {
+      width: 445px;
+      height: 445px;
+      display: inline-block;
+      border-radius: 50%;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
 
 
+//RWD 576px ======================
+
+@media only screen and (max-width: 576px) {
+    #advice {
+      margin-top: 150px;
+      max-width: 576px;
+      // overflow: hidden;
+    }
+  
+    .arrowline-1 {
+      position: absolute;
+      z-index: 99;
+      right: -200px;
+      top: 200px;
+    }
+  
+    .arrowline-2 {
+      position: absolute;
+      z-index: 99;
+      top: 750px;
+      left: -250px;
+    }
+  
+    .circle-1 {
+      position: absolute;
+      width: 445px;
+      height: 445px;
+      z-index: 9;
+      right: -545px;
+      background-color: $LightGrey;
+      border-radius: 50%;
+    }
+    .circle-2 {
+      position: absolute;
+      width: 445px;
+      height: 445px;
+      z-index: 9;
+      top: 600px;
+      left: -550px;
+      background-color: $LightGrey;
+      border-radius: 50%;
+    }
+  
+      .advice {
+        max-width: 768px;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(4, 1fr);
+        grid-column-gap: auto;
+        position: relative;
+        margin: 0 auto;
+        justify-items: center;
+        grid-template-areas:
+          "img--1"
+          "context--1"
+          "img--2"
+          "context--2";
+      }
+  
+      .context--1 {
+        order: 2;
+        grid-area: "context--1" ;
+      }
+  
+      .context--2 {
+        order: 4;
+        grid-area: "context--2" ;
+      }
+  
+      .img--1 {
+        order: 1;
+        grid-area: "img--1";
+      }
+  
+      .img--2 {
+        order: 3;
+        grid-area: "img--2";
+  
+      }
+  
+      .context {
+        max-width: 311px;
+        height: 196px;
+        @include FlexStyle;
+        flex-direction: column;
+  
+        h2 {
+          text-align: center;
+          @include ThirdHeading;
+          font-size: 32px;
+          line-height: 32px;
+          width: 311px;
+          letter-spacing: -2.15px;
+        }
+  
+        p {
+          text-align: center;
+          @include Paragraph;
+          color: $DimGrey;
+          width: 311px;
+        }
+  
+        a {
+          @include Button;
+          box-sizing: content-box;
+        }
+  
+        a:hover {
+          @include ButtonHover;
+        }
+      }
+  
+      .img {
+        width: 311px;
+        height: 311px;
+        display: inline-block;
+        border-radius: 50%;
+        overflow: hidden;
+  
+        img {
+          width: 100%;
+        }
+      }
+    } 
 

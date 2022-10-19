@@ -33,3 +33,191 @@
         }
     }
 }
+
+//RWD 992px ===========================
+
+@media only screen and (max-width:992px){
+    #footer{
+        background-color: #333A44;
+        height: 96px;
+    }
+    
+    .footer{
+        @include FlexStyle;
+        justify-content: space-around;
+    
+        &__left{
+            height: 96px;
+            // padding-top: 35px;
+            width: 417px;
+            @include FlexStyle;
+        }
+    
+        &__right{
+            width: 130px;
+            @include FlexStyle;
+            height: 96px;
+    
+            a{
+                text-decoration: none;
+            }
+    
+            .bx{
+                color: $Yellow;
+                font-size: 30px;
+            }
+    
+            .bx:hover{
+                color: #fff;
+                font-size: 30px;
+            }
+        }
+    }
+}
+
+
+//RWD 768px ===========================
+
+@media only screen and (max-width:768px){
+    #footer{
+        background-color: #333A44;
+        height: 96px;
+    }
+    
+    .footer{
+        @include FlexStyle;
+        justify-content: space-around;
+    
+        &__left{
+            width: 65%;
+            height: 96px;
+            // padding-top: 35px;
+            width: 417px;
+            @include FlexStyle;
+        }
+    
+        &__right{
+            width: 130px;
+            @include FlexStyle;
+            height: 96px;
+    
+            a{
+                text-decoration: none;
+            }
+    
+            .bx{
+                color: $Yellow;
+                font-size: 30px;
+            }
+    
+            .bx:hover{
+                color: #fff;
+                font-size: 30px;
+            }
+        }
+    }
+}
+
+
+//RWD 576px ===========================
+
+@media only screen and (max-width:576px){
+    #footer{
+        background-color: #333A44;
+        height: 96px;
+        height: 270px;
+    }
+    
+    .footer{
+        @include FlexStyle;
+        width: 100%;
+        flex-direction: column;
+        
+        &__left{
+            width: 65%;
+            height: 96px;
+            // padding-top: 35px;
+            width: 417px;
+            @include FlexStyle;
+            flex-direction: column;
+            margin-top: 50px;
+        }
+    
+        &__right{
+            width: 130px;
+            @include FlexStyle;
+            height: 96px;
+    
+            a{
+                text-decoration: none;
+            }
+    
+            .bx{
+                color: $Yellow;
+                font-size: 30px;
+            }
+    
+            .bx:hover{
+                color: #fff;
+                font-size: 30px;
+            }
+        }
+    }
+}
+
+//RWD 375px ===========================
+
+@media only screen and (max-width:375px){
+    #footer{
+        background-color: #333A44;
+        height: 438px;
+        padding: 64px 0 0 0 ;
+    }
+    
+    .footer{
+        margin: 0 auto;
+        // margin-top: 64px;
+        @include FlexStyle;
+        width: 120px;
+        height: 286px;
+        flex-direction: column;
+        
+        
+        &__left{
+            margin: 0 auto;
+            height: 186px;
+            width: 120px;
+            @include FlexStyle;
+            flex-direction: column;
+            // margin-top: 50px;
+
+            .ul{
+                width: 120px;
+                height: 107px;
+                @include FlexStyle;
+                flex-direction: column;
+            }
+        }
+    
+        &__right{
+            width: 120px;
+            @include FlexStyle;
+            height: 90px;
+    
+            a{
+                text-decoration: none;
+            }
+    
+            .bx{
+                color: $Yellow;
+                font-size: 30px;
+            }
+    
+            .bx:hover{
+                color: #fff;
+                font-size: 30px;
+            }
+        }
+    }
+}
+

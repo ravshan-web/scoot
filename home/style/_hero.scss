@@ -1,27 +1,31 @@
 #hero{
     max-width: 100%;
-    height: 295px;
+    min-height: 295px;
     margin-top: 160px;
 }
 
 .hero{
     position: relative;
+    max-width: 100%;
+    min-height: 295px;
 }
 
-.grey-line{
-    width: 974px;
-    background-color: #E5ECF4;
-    border: 15px solid #E5ECF4;
-    position: absolute;
-    z-index: -5;
-    top: 34px;
-    left: -210px;
-}
+
 
 .wrapper{
     position: relative;
-    max-width: 100%;
+    max-width: 1106px;
     @include FlexStyle;
+
+    .grey-line{
+        width: 974px;
+        background-color: #E5ECF4;
+        border: 15px solid #E5ECF4;
+        position: absolute;
+        z-index: -5;
+        top: 34px;
+        left: -210px;
+    }
 
     &__card{
         width: 350px;
@@ -54,3 +58,297 @@
     }
 }
 
+// RWD 992px ======================
+
+@media only screen and (max-width:992px){
+    #hero{
+        max-width: 992px;
+        min-height: 295px;
+        margin-top: 160px;
+    }
+    
+    .hero{
+        // position: relative;
+        max-width: 992px;
+        min-height: 295px;
+    }
+    
+    
+    
+    .wrapper{
+        margin: 0 auto;
+        max-width: 573px;
+        min-height: 470px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+
+        .grey-line{
+            max-width: 673px;
+            height: 1px;
+            background-color: #E5ECF4;
+            border: 15px solid #E5ECF4;
+            position: absolute;
+            z-index: -5;
+            top: 50px;
+            left: -286px;
+            transform: rotate(90deg);
+        }
+    
+        &__card{
+            width: 573px;
+            height: 130px;
+            @include FlexStyle;
+            align-items: flex-start;
+            position: relative;
+    
+            .image{                
+                max-width: 96px;
+                height: 96px;
+            }
+    
+            .desc{
+                width: 398px;
+                height: 130px;
+                @include FlexStyle;
+                flex-direction: column;
+                align-items: flex-start;
+    
+                h2{
+                    @include FourthHeading;
+                }
+                
+                p{
+                    @include Paragraph;
+                    color: $DimGrey;
+                }
+            }
+        }
+    }
+}
+
+
+// RWD 768px ======================
+
+@media only screen and (max-width:768px){
+    #hero{
+        max-width: 768px;
+        min-height: 295px;
+        margin-top: 160px;
+    }
+    
+    .hero{
+        // position: relative;
+        max-width: 768px;
+        min-height: 295px;
+    }
+    
+    
+    
+    .wrapper{
+        margin: 0 auto;
+        max-width: 573px;
+        min-height: 470px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+
+        .grey-line{
+            max-width: 673px;
+            height: 1px;
+            background-color: #E5ECF4;
+            border: 15px solid #E5ECF4;
+            position: absolute;
+            z-index: -5;
+            top: 50px;
+            left: -286px;
+            transform: rotate(90deg);
+        }
+    
+        &__card{
+            width: 573px;
+            height: 130px;
+            @include FlexStyle;
+            align-items: flex-start;
+            position: relative;
+    
+            .image{                
+                max-width: 96px;
+                height: 96px;
+            }
+    
+            .desc{
+                width: 398px;
+                height: 130px;
+                @include FlexStyle;
+                flex-direction: column;
+                align-items: flex-start;
+    
+                h2{
+                    @include FourthHeading;
+                }
+                
+                p{
+                    @include Paragraph;
+                    color: $DimGrey;
+                }
+            }
+        }
+    }
+}
+
+
+// RWD 576px ======================
+
+@media only screen and (max-width:576px){
+    #hero{
+        max-width: 576px;
+        min-height: 295px;
+        margin-top: 160px;
+    }
+    
+    .hero{
+        // position: relative;
+        max-width: 576px;
+        min-height: 295px;
+    }
+    
+    
+    
+    .wrapper{
+        margin: 0 auto;
+        max-width: 556px;
+        min-height: 470px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+
+        .grey-line{
+            max-width: 673px;
+            height: 1px;
+            background-color: #E5ECF4;
+            border: 15px solid #E5ECF4;
+            position: absolute;
+            z-index: -5;
+            top: 50px;
+            left: -286px;
+            transform: rotate(90deg);
+            display: none;
+        }
+    
+        &__card{
+            width: 320px;
+            height: 255px;
+            margin: 0 auto;
+            @include FlexStyle;
+            flex-direction: column;
+            margin-bottom: 48px;
+    
+            .image{                
+                max-width: 76px;
+                height: 76px;
+            }
+    
+            .desc{
+                max-width: 320px;
+                height: 152px;
+                @include FlexStyle;
+                flex-direction: column;
+    
+                h2{
+                    width: 320px;
+                    @include FourthHeading;
+                    text-align: center;
+                }
+                
+                p{
+                    
+                    @include Paragraph;
+                    text-align: center;
+                    color: $DimGrey;
+                    width: 320px;
+                }
+            }
+        }
+    }
+}
+
+
+// RWD 375px ======================
+
+@media only screen and (max-width:375px){
+    #hero{
+        max-width: 375px;
+        min-height: 295px;
+        margin-top: 160px;
+    }
+    
+    .hero{
+        // position: relative;
+        max-width: 375px;
+        min-height: 295px;
+    }
+    
+    
+    
+    .wrapper{
+        margin: 0 auto;
+        max-width: 375px;
+        min-height: 470px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+
+        .grey-line{
+            max-width: 673px;
+            height: 1px;
+            background-color: #E5ECF4;
+            border: 15px solid #E5ECF4;
+            position: absolute;
+            z-index: -5;
+            top: 50px;
+            left: -286px;
+            transform: rotate(90deg);
+            display: none;
+        }
+    
+        &__card{
+            width: 320px;
+            height: 255px;
+            margin: 0 auto;
+            @include FlexStyle;
+            flex-direction: column;
+            margin-bottom: 48px;
+    
+            .image{                
+                max-width: 76px;
+                height: 76px;
+            }
+    
+            .desc{
+                max-width: 320px;
+                height: 152px;
+                @include FlexStyle;
+                flex-direction: column;
+    
+                h2{
+                    width: 320px;
+                    @include FourthHeading;
+                    text-align: center;
+                }
+                
+                p{
+                    
+                    @include Paragraph;
+                    text-align: center;
+                    color: $DimGrey;
+                    width: 320px;
+                }
+            }
+        }
+    }
+}

@@ -1,5 +1,5 @@
 #zero{
-    margin-top: 160px;
+    margin-top: 330px;
     background-color: $DarkNavy;
     height: 300px;
     width: 100%;
@@ -117,6 +117,542 @@
                 font-size: 20px;
                 line-height: 24px;
                 letter-spacing: -0.892857px;
+            }
+        }
+    }
+}
+
+
+// RWD 992px =========================
+
+@media only screen and (max-width:992px){
+    #zero{
+        margin-top: 180px;
+        background-color: $DarkNavy;
+        height: 300px;
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .zero{
+        padding: 60px 40px;
+        @include FlexStyle;
+        position: relative;
+        justify-content: none;
+        flex-direction: column;
+    
+        .oval-1{
+            position: absolute;
+            width: 347px;
+            height: 347px;
+            border: 15px solid $DimGrey;
+            opacity: 0.1;
+            border-radius: 50%;
+            top: 130px;
+            left: -194px;
+        }
+    
+        .oval-2{
+            position: absolute;
+            width: 347px;
+            height: 347px;
+            border: 15px solid $DimGrey;
+            opacity: 0.1;
+            border-radius: 50%;
+            top: 150px;
+            right: 0px;
+            left: 0px;
+            margin: 0 auto;
+        }
+    
+        .oval-3{
+            position: absolute;
+            width: 347px;
+            height: 347px;
+            background-color:$DimGrey ;
+            opacity: 0.1;
+            border-radius: 50%;
+            top: 150px;
+            right: -194px;
+        }
+    
+        h2{
+            @include SecondaryHeading;
+            color: #fff;
+            width: 415px;
+            letter-spacing: -2.143px;
+            text-align: center;
+            z-index: 9;
+        }
+    
+        .app{
+            @include FlexStyle;
+            width: 390px;
+            z-index: 99;
+            margin-top: 30px;
+    
+            &__card-1{
+                cursor: pointer;
+                display: block;
+                background-color: $LightGrey;
+                width: 159px;
+                height: 56px;
+                border-radius: 4px;
+                @include FlexStyle;
+                justify-content: space-evenly;
+    
+                .bx{
+                    color: $DarkNavy;
+                    font-size: 30px;
+                }
+    
+                p{
+                    @include FourthHeading;
+                    font-size: 10px;
+                    line-height: 15px;
+                    color: $DarkNavy;
+                    letter-spacing: -0.446429px;
+                }
+    
+                h5{
+                    @include FourthHeading;
+                    font-size: 20px;
+                    line-height: 24px;
+                    letter-spacing: -0.892857px;
+                }
+            }
+    
+            &__card-2{
+                cursor: pointer;
+                display: block;
+                background-color: $LightGrey;
+                width: 182px;
+                height: 56px;
+                border-radius: 4px;
+                @include FlexStyle;
+                justify-content: space-evenly;
+    
+                .bx{
+                    color: $DarkNavy;
+                    font-size: 30px;
+                }
+    
+                p{
+                    @include FourthHeading;
+                    font-size: 10px;
+                    line-height: 15px;
+                    color: $DarkNavy;
+                    letter-spacing: -0.446429px;
+                }
+    
+                h5{
+                    @include FourthHeading;
+                    font-size: 20px;
+                    line-height: 24px;
+                    letter-spacing: -0.892857px;
+                }
+            }
+        }
+    }
+}
+
+// RWD 768px =========================
+
+@media only screen and (max-width:768px){
+    #zero{
+        margin-top: 180px;
+        background-color: $DarkNavy;
+        height: 300px;
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .zero{
+        padding: 60px 40px;
+        @include FlexStyle;
+        position: relative;
+        justify-content: none;
+        flex-direction: column;
+    
+        .oval-1{
+            position: absolute;
+            width: 347px;
+            height: 347px;
+            border: 15px solid $DimGrey;
+            opacity: 0.1;
+            border-radius: 50%;
+            top: 130px;
+            left: -194px;
+        }
+    
+        .oval-2{
+            position: absolute;
+            width: 347px;
+            height: 347px;
+            border: 15px solid $DimGrey;
+            opacity: 0.1;
+            border-radius: 50%;
+            top: 150px;
+            right: 0px;
+            left: 0px;
+            margin: 0 auto;
+        }
+    
+        .oval-3{
+            position: absolute;
+            width: 347px;
+            height: 347px;
+            background-color:$DimGrey ;
+            opacity: 0.1;
+            border-radius: 50%;
+            top: 150px;
+            right: -194px;
+        }
+    
+        h2{
+            @include SecondaryHeading;
+            color: #fff;
+            width: 415px;
+            letter-spacing: -2.143px;
+            text-align: center;
+            z-index: 9;
+        }
+    
+        .app{
+            @include FlexStyle;
+            width: 390px;
+            z-index: 99;
+            margin-top: 30px;
+    
+            &__card-1{
+                cursor: pointer;
+                display: block;
+                background-color: $LightGrey;
+                width: 159px;
+                height: 56px;
+                border-radius: 4px;
+                @include FlexStyle;
+                justify-content: space-evenly;
+    
+                .bx{
+                    color: $DarkNavy;
+                    font-size: 30px;
+                }
+    
+                p{
+                    @include FourthHeading;
+                    font-size: 10px;
+                    line-height: 15px;
+                    color: $DarkNavy;
+                    letter-spacing: -0.446429px;
+                }
+    
+                h5{
+                    @include FourthHeading;
+                    font-size: 20px;
+                    line-height: 24px;
+                    letter-spacing: -0.892857px;
+                }
+            }
+    
+            &__card-2{
+                cursor: pointer;
+                display: block;
+                background-color: $LightGrey;
+                width: 182px;
+                height: 56px;
+                border-radius: 4px;
+                @include FlexStyle;
+                justify-content: space-evenly;
+    
+                .bx{
+                    color: $DarkNavy;
+                    font-size: 30px;
+                }
+    
+                p{
+                    @include FourthHeading;
+                    font-size: 10px;
+                    line-height: 15px;
+                    color: $DarkNavy;
+                    letter-spacing: -0.446429px;
+                }
+    
+                h5{
+                    @include FourthHeading;
+                    font-size: 20px;
+                    line-height: 24px;
+                    letter-spacing: -0.892857px;
+                }
+            }
+        }
+    }
+}
+
+
+// RWD 576px =========================
+
+@media only screen and (max-width:576px){
+    #zero{
+        margin-top: 180px;
+        background-color: $DarkNavy;
+        height: 300px;
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .zero{
+        padding: 60px 40px;
+        @include FlexStyle;
+        position: relative;
+        justify-content: none;
+        flex-direction: column;
+    
+        .oval-1{
+            position: absolute;
+            width: 347px;
+            height: 347px;
+            border: 15px solid $DimGrey;
+            opacity: 0.1;
+            border-radius: 50%;
+            top: 130px;
+            left: -194px;
+        }
+    
+        .oval-2{
+            position: absolute;
+            width: 347px;
+            height: 347px;
+            border: 15px solid $DimGrey;
+            opacity: 0.1;
+            border-radius: 50%;
+            top: 150px;
+            right: 0px;
+            left: 0px;
+            margin: 0 auto;
+        }
+    
+        .oval-3{
+            position: absolute;
+            width: 347px;
+            height: 347px;
+            background-color:$DimGrey ;
+            opacity: 0.1;
+            border-radius: 50%;
+            top: 150px;
+            right: -194px;
+        }
+    
+        h2{
+            @include SecondaryHeading;
+            color: #fff;
+            width: 415px;
+            letter-spacing: -2.143px;
+            text-align: center;
+            z-index: 9;
+        }
+    
+        .app{
+            @include FlexStyle;
+            width: 390px;
+            z-index: 99;
+            margin-top: 30px;
+    
+            &__card-1{
+                cursor: pointer;
+                display: block;
+                background-color: $LightGrey;
+                width: 159px;
+                height: 56px;
+                border-radius: 4px;
+                @include FlexStyle;
+                justify-content: space-evenly;
+    
+                .bx{
+                    color: $DarkNavy;
+                    font-size: 30px;
+                }
+    
+                p{
+                    @include FourthHeading;
+                    font-size: 10px;
+                    line-height: 15px;
+                    color: $DarkNavy;
+                    letter-spacing: -0.446429px;
+                }
+    
+                h5{
+                    @include FourthHeading;
+                    font-size: 20px;
+                    line-height: 24px;
+                    letter-spacing: -0.892857px;
+                }
+            }
+    
+            &__card-2{
+                cursor: pointer;
+                display: block;
+                background-color: $LightGrey;
+                width: 182px;
+                height: 56px;
+                border-radius: 4px;
+                @include FlexStyle;
+                justify-content: space-evenly;
+    
+                .bx{
+                    color: $DarkNavy;
+                    font-size: 30px;
+                }
+    
+                p{
+                    @include FourthHeading;
+                    font-size: 10px;
+                    line-height: 15px;
+                    color: $DarkNavy;
+                    letter-spacing: -0.446429px;
+                }
+    
+                h5{
+                    @include FourthHeading;
+                    font-size: 20px;
+                    line-height: 24px;
+                    letter-spacing: -0.892857px;
+                }
+            }
+        }
+    }
+}
+
+
+// RWD 375px =========================
+
+@media only screen and (max-width:375px){
+    #zero{
+        margin-top: 180px;
+        background-color: $DarkNavy;
+        height: 320px;
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .zero{
+        padding: 60px 40px;
+        @include FlexStyle;
+        position: relative;
+        justify-content: none;
+        flex-direction: column;
+    
+        .oval-1{
+            position: absolute;
+            width: 347px;
+            height: 347px;
+            border: 15px solid $DimGrey;
+            opacity: 0.1;
+            border-radius: 50%;
+            top: 130px;
+            left: -194px;
+        }
+    
+        .oval-2{
+            position: absolute;
+            width: 347px;
+            height: 347px;
+            border: 15px solid $DimGrey;
+            opacity: 0.1;
+            border-radius: 50%;
+            top: 150px;
+            right: 0px;
+            left: 0px;
+            margin: 0 auto;
+            display: none;
+        }
+    
+        .oval-3{
+            position: absolute;
+            width: 347px;
+            height: 347px;
+            background-color:$DimGrey ;
+            opacity: 0.1;
+            border-radius: 50%;
+            top: 150px;
+            right: -194px;
+        }
+    
+        h2{
+            @include SecondaryHeading;
+            color: #fff;
+            width: 311px;
+            letter-spacing: -2.143px;
+            text-align: center;
+            z-index: 9;
+        }
+    
+        .app{
+            @include FlexStyle;
+            width: 257px;
+            z-index: 99;
+            margin-top: 30px;
+    
+            &__card-1{
+                cursor: pointer;
+                display: block;
+                background-color: $LightGrey;
+                width: 114px;
+                height: 40px;
+                border-radius: 4px;
+                @include FlexStyle;
+                justify-content: space-evenly;
+    
+                .bx{
+                    color: $DarkNavy;
+                    font-size: 24px;
+                }
+    
+                p{
+                    @include FourthHeading;
+                    font-size: 8px;
+                    line-height: 10px;
+                    color: $DarkNavy;
+                    letter-spacing: -1px;
+                }
+    
+                h5{
+                    @include FourthHeading;
+                    font-size: 14px;
+                    line-height: 16px;
+                    letter-spacing: -0.892857px;
+                }
+            }
+    
+            &__card-2{
+                cursor: pointer;
+                display: block;
+                background-color: $LightGrey;
+                width: 130px;
+                height: 40px;
+                border-radius: 4px;
+                @include FlexStyle;
+                justify-content: space-evenly;
+    
+                .bx{
+                    color: $DarkNavy;
+                    font-size: 24px;
+                }
+    
+                p{
+                    @include FourthHeading;
+                    font-size: 8px;
+                    line-height: 10px;
+                    color: $DarkNavy;
+                    letter-spacing: -1px;
+                }
+    
+                h5{
+                    @include FourthHeading;
+                    font-size: 14px;
+                    line-height: 16px;
+                    letter-spacing: -0.892857px;
+                }
             }
         }
     }

@@ -5,3 +5,51 @@
     box-sizing: border-box;
     // background-color: rgb(159, 205, 255);  
 }
+
+// RWD 992px ====================================================
+
+@media only screen and (max-width:992px){
+    .container{
+        max-width: 952px;
+        margin: 0 auto;
+        padding: 0;
+        box-sizing: border-box;
+        // background-color: rgb(159, 205, 255);  
+    }
+}
+
+// RWD 768px ====================================================
+
+@media only screen and (max-width:768px){
+    .container{
+        max-width: 688px;
+        margin: 0 auto;
+        padding: 0;
+        box-sizing: border-box;
+        // background-color: rgb(159, 205, 255);  
+    }
+}
+
+// RWD 576px ====================================================
+
+@media only screen and (max-width:576px){
+    .container{
+        max-width: 576px;
+        margin: 0 auto;
+        padding: 0;
+        box-sizing: border-box;
+        // background-color: rgb(159, 205, 255);  
+    }
+}
+
+// RWD 375px ====================================================
+
+@media only screen and (max-width:375px){
+    .container{
+        max-width: 375px;
+        margin: 0 auto;
+        padding: 0;
+        box-sizing: border-box;
+        // background-color: rgb(159, 205, 255);  
+    }
+}

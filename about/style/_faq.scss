@@ -1,109 +1,774 @@
-#faq{
-    max-width: 100%;
-    min-height: 990px;
-    margin-top: 120px;
+#faq {
+  max-width: 100%;
+  margin-top: 180px;
 }
 
-.faq{
-    max-width: 100%;
-    min-height: 990px;
+.faq {
+  max-width: 100%;
 
-    &__title{
-        @include FlexStyle;
-        justify-content: center ;
-        width: 100%;
-        
-        h2{
-            @include SecondaryHeading;
-            letter-spacing: -2.14286px;
-            max-width: 540px;
+  &__title {
+    @include FlexStyle;
+    justify-content: center;
+    width: 100%;
+
+    h2 {
+      @include SecondaryHeading;
+      letter-spacing: -2.14286px;
+      max-width: 540px;
+      height: 48px;
+    }
+  }
+
+  &__question {
+    margin-top: 64px;
+    margin-bottom: 20px;
+    width: 100%;
+    @include FlexStyle;
+
+    &--leftside {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      max-width: 311px;
+      height: 400px;
+      
+
+      h3 {
+        display: block;
+        @include ThirdHeading;
+        letter-spacing: -1.78571px;
+      }
+    }
+
+    &--rightside {
+      min-width: 730px;
+      height: 400px;
+      margin: 20px auto;
+      // background-color: rgb(200, 201, 255);
+
+      .qs-blocks:hover {
+        background-color: #fff4df;
+      }
+
+      .qs-blocks {
+        margin-bottom: 300px;
+        overflow-wrap: break-word;
+        max-width: 730px;
+        padding: 32px 40px;
+        background-color: $Snow;
+        margin-bottom: 16px;
+
+        &__title {
+          @include FlexStyle;
+          max-width: 311px;
+
+          h4 {
+            display: block;
+            @include FourthHeading;
+            letter-spacing: -1.07143px;
+          }
+
+          &--toggle {
+            display: block;
+            width: 10px;
+            height: 10px;
+            border-bottom: 3px;
+            border-right: 3px;
+            border-left: 0px;
+            border-top: 0px;
+            border-color: $Yellow;
+            border-style: solid;
+            transform: rotate(-135deg);
+          }
+
+          &--toggle2 {
+            display: block;
+            width: 10px;
+            height: 10px;
+            border-bottom: 3px;
+            border-right: 3px;
+            border-left: 0px;
+            border-top: 0px;
+            border-color: $Yellow;
+            border-style: solid;
+            transform: rotate(45deg);
+          }
+        }
+
+        &__context {
+          margin-top: 18px;
+          p {
+            @include Paragraph;
+          }
+        }
+      }
+    }
+  }
+}
+
+// RWD 992px ====================
+
+@media only screen and (max-width: 992px) {
+  #faq {
+    max-width: 100%;
+    margin-top: 180px;
+  }
+
+  .faq {
+    max-width: 100%;
+
+    &__title {
+      @include FlexStyle;
+      justify-content: center;
+      width: 100%;
+
+      h2 {
+        @include SecondaryHeading;
+        letter-spacing: -2.14286px;
+        max-width: 540px;
         height: 48px;
-        }
+      }
     }
 
-    &__question{
-        margin-top: 64px;
-        margin-bottom: 20px;
-        width: 100%;
-        @include FlexStyle;
-        
-        &--leftside{
-            display: flex;
-            justify-content: flex-start;
-            align-items: flex-start;
-            max-width: 350px;   
-            height: 400px;
-            // background-color: rgb(255, 221, 221);
+    &__question {
+      margin-top: 64px;
+      margin-bottom: 20px;
+      width: 100%;
+      @include FlexStyle;
+      flex-direction: column;
 
-            h3{
-                @include ThirdHeading;
-                letter-spacing: -1.78571px;
-            }
+      &--leftside {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 350px;
+        height: auto;
+        margin: 30px auto;
+
+        h3 {
+          @include ThirdHeading;
+          letter-spacing: -1.78571px;
+        }
+      }
+
+      &--rightside {
+        max-width: 730px;
+        // height: 400px;
+        // background-color: rgb(200, 201, 255);
+
+        .qs-blocks:hover {
+          background-color: #fff4df;
         }
 
-        &--rightside{
-            min-width: 730px;
-            height: 400px;
-            // background-color: rgb(200, 201, 255);
+        .qs-blocks {
+          max-width: 730px;
+          min-height: 92px;
+          padding: 32px 40px;
+          background-color: $Snow;
+          margin-bottom: 16px;
 
-            .qs-blocks:hover{
-                background-color: #FFF4DF;
-            } 
+          &__title {
+            @include FlexStyle;
+            // max-width: 356px;
 
-            .qs-blocks{                
-                max-width: 730px;
-                min-height: 92px;
-                padding: 32px 40px;
-                background-color: $Snow;
-                margin-bottom: 16px;   
-
-                &__title{
-                    @include FlexStyle;
-                    // max-width: 356px;
-
-                    h4{
-                        @include FourthHeading;
-                        letter-spacing: -1.07143px;
-                    }
-
-                    &--toggle{
-                        display: block;
-                        width: 10px;
-                        height: 10px;
-                        border-bottom:3px;
-                        border-right: 3px;
-                        border-left: 0px;
-                        border-top: 0px;
-                        border-color: $Yellow;
-                        border-style: solid;
-                        transform: rotate(-135deg);
-                    }
-
-                    &--toggle2{
-                        display: block;
-                        width: 10px;
-                        height: 10px;
-                        border-bottom:3px;
-                        border-right: 3px;
-                        border-left: 0px;
-                        border-top: 0px;
-                        border-color: $Yellow;
-                        border-style: solid;
-                        transform: rotate(45deg);
-                    }
-                }
-
-                &__context{
-                    margin-top: 24px;
-                    p{
-                        @include Paragraph;
-
-                    }
-                }
+            h4 {
+              @include FourthHeading;
+              letter-spacing: -1.07143px;
             }
+
+            &--toggle {
+              display: block;
+              width: 10px;
+              height: 10px;
+              border-bottom: 3px;
+              border-right: 3px;
+              border-left: 0px;
+              border-top: 0px;
+              border-color: $Yellow;
+              border-style: solid;
+              transform: rotate(-135deg);
+            }
+
+            &--toggle2 {
+              display: block;
+              width: 10px;
+              height: 10px;
+              border-bottom: 3px;
+              border-right: 3px;
+              border-left: 0px;
+              border-top: 0px;
+              border-color: $Yellow;
+              border-style: solid;
+              transform: rotate(45deg);
+            }
+          }
+
+          &__context {
+            margin-top: 24px;
+            p {
+              @include Paragraph;
+            }
+          }
         }
-
-
+      }
     }
-
+  }
 }
+
+// RWD 768px ====================
+
+@media only screen and (max-width: 768px) {
+  #faq {
+    max-width: 100%;
+    // min-height: 990px;
+    margin-top: 180px;
+  }
+
+  .faq {
+    max-width: 100%;
+    // min-height: 990px;
+
+    &__title {
+      @include FlexStyle;
+      justify-content: center;
+      width: 100%;
+
+      h2 {
+        @include SecondaryHeading;
+        letter-spacing: -2.14286px;
+        max-width: 540px;
+        height: 48px;
+      }
+    }
+
+    &__question {
+      margin: 0 auto;
+      margin-top: 64px;
+      margin-bottom: 20px;
+      width: 100%;
+      @include FlexStyle;
+      flex-direction: column;
+
+      &--leftside {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 350px;
+        height: auto;
+        margin: 30px auto;
+
+        h3 {
+          @include ThirdHeading;
+          letter-spacing: -1.78571px;
+        }
+      }
+
+      &--rightside {
+        max-width: 689px;
+        // height: 400px;
+        // background-color: rgb(200, 201, 255);
+
+        .qs-blocks:hover {
+          background-color: #fff4df;
+        }
+
+        .qs-blocks {
+          max-width: 689px;
+          min-height: 92px;
+          padding: 32px 40px;
+          background-color: $Snow;
+          margin-bottom: 16px;
+
+          &__title {
+            @include FlexStyle;
+            // max-width: 356px;
+
+            h4 {
+              @include FourthHeading;
+              letter-spacing: -1.07143px;
+            }
+
+            &--toggle {
+              display: block;
+              width: 10px;
+              height: 10px;
+              border-bottom: 3px;
+              border-right: 3px;
+              border-left: 0px;
+              border-top: 0px;
+              border-color: $Yellow;
+              border-style: solid;
+              transform: rotate(-135deg);
+            }
+
+            &--toggle2 {
+              display: block;
+              width: 10px;
+              height: 10px;
+              border-bottom: 3px;
+              border-right: 3px;
+              border-left: 0px;
+              border-top: 0px;
+              border-color: $Yellow;
+              border-style: solid;
+              transform: rotate(45deg);
+            }
+          }
+
+          &__context {
+            margin-top: 24px;
+            p {
+              @include Paragraph;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+// RWD 992px ====================
+
+@media only screen and (max-width: 992px) {
+  #faq {
+    max-width: 100%;
+    margin-top: 180px;
+  }
+
+  .faq {
+    max-width: 100%;
+
+    &__title {
+      @include FlexStyle;
+      justify-content: center;
+      width: 100%;
+
+      h2 {
+        @include SecondaryHeading;
+        letter-spacing: -2.14286px;
+        max-width: 540px;
+        height: 48px;
+      }
+    }
+
+    &__question {
+      margin-top: 64px;
+      margin-bottom: 20px;
+      width: 100%;
+      @include FlexStyle;
+      flex-direction: column;
+
+      &--leftside {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 350px;
+        height: auto;
+        margin: 30px auto;
+
+        h3 {
+          @include ThirdHeading;
+          letter-spacing: -1.78571px;
+        }
+      }
+
+      &--rightside {
+        max-width: 730px;
+        // height: 400px;
+        // background-color: rgb(200, 201, 255);
+
+        .qs-blocks:hover {
+          background-color: #fff4df;
+        }
+
+        .qs-blocks {
+          max-width: 730px;
+          min-height: 92px;
+          padding: 32px 40px;
+          background-color: $Snow;
+          margin-bottom: 16px;
+
+          &__title {
+            @include FlexStyle;
+            // max-width: 356px;
+
+            h4 {
+              @include FourthHeading;
+              letter-spacing: -1.07143px;
+            }
+
+            &--toggle {
+              display: block;
+              width: 10px;
+              height: 10px;
+              border-bottom: 3px;
+              border-right: 3px;
+              border-left: 0px;
+              border-top: 0px;
+              border-color: $Yellow;
+              border-style: solid;
+              transform: rotate(-135deg);
+            }
+
+            &--toggle2 {
+              display: block;
+              width: 10px;
+              height: 10px;
+              border-bottom: 3px;
+              border-right: 3px;
+              border-left: 0px;
+              border-top: 0px;
+              border-color: $Yellow;
+              border-style: solid;
+              transform: rotate(45deg);
+            }
+          }
+
+          &__context {
+            margin-top: 24px;
+            p {
+              @include Paragraph;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+// RWD 768px ====================
+
+@media only screen and (max-width: 768px) {
+  #faq {
+    max-width: 100%;
+    margin-top: 180px;
+  }
+
+  .faq {
+    max-width: 100%;
+
+    &__title {
+      @include FlexStyle;
+      justify-content: center;
+      width: 100%;
+
+      h2 {
+        @include SecondaryHeading;
+        letter-spacing: -2.14286px;
+        max-width: 540px;
+        height: 48px;
+      }
+    }
+
+    &__question {
+      margin: 0 auto;
+      margin-top: 64px;
+      margin-bottom: 20px;
+      width: 100%;
+      @include FlexStyle;
+      flex-direction: column;
+
+      &--leftside {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 350px;
+        height: auto;
+        margin: 30px auto;
+
+        h3 {
+          @include ThirdHeading;
+          letter-spacing: -1.78571px;
+        }
+      }
+
+      &--rightside {
+        margin: 0 auto;
+        max-width: 689px;
+
+        .qs-blocks:hover {
+          background-color: #fff4df;
+        }
+
+        .qs-blocks {
+          max-width: 689px;
+          min-height: 92px;
+          padding: 32px 40px;
+          background-color: $Snow;
+          margin-bottom: 16px;
+
+          &__title {
+            @include FlexStyle;
+            // max-width: 356px;
+
+            h4 {
+              @include FourthHeading;
+              letter-spacing: -1.07143px;
+            }
+
+            &--toggle {
+              display: block;
+              width: 10px;
+              height: 10px;
+              border-bottom: 3px;
+              border-right: 3px;
+              border-left: 0px;
+              border-top: 0px;
+              border-color: $Yellow;
+              border-style: solid;
+              transform: rotate(-135deg);
+            }
+
+            &--toggle2 {
+              display: block;
+              width: 10px;
+              height: 10px;
+              border-bottom: 3px;
+              border-right: 3px;
+              border-left: 0px;
+              border-top: 0px;
+              border-color: $Yellow;
+              border-style: solid;
+              transform: rotate(45deg);
+            }
+          }
+
+          &__context {
+            margin-top: 24px;
+            p {
+              @include Paragraph;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+// RWD 576px ====================
+
+@media only screen and (max-width: 576px) {
+  #faq {
+    max-width: 512px;
+    margin-top: 180px;
+  }
+
+  .faq {
+    max-width: 576px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+
+    &__title {
+      width: 100%;
+
+      h2 {
+        @include SecondaryHeading;
+        letter-spacing: -2.14286px;
+        max-width: 540px;
+        height: 48px;
+      }
+    }
+
+    &__question {      
+      margin-top: 64px;
+      margin-bottom: 20px;
+      width: 512px;
+      @include FlexStyle;
+      flex-direction: column;
+      margin: 0 auto;
+
+      &--leftside {
+       text-align: center;
+       margin: 30px 0;
+
+        h3 {
+          @include ThirdHeading;
+          letter-spacing: -1.78571px;
+        }
+      }
+
+      &--rightside {
+        margin: 20px auto;
+        max-width: 512px;
+
+        .qs-blocks:hover {
+          background-color: #fff4df;
+        }
+
+        .qs-blocks {
+          max-width: 512px;
+          min-height: 92px;
+          padding: 32px;
+          background-color: $Snow;
+          margin-bottom: 16px;
+
+          &__title {
+            @include FlexStyle;
+
+            h4 {
+              @include FourthHeading;
+              letter-spacing: -1.07143px;
+            }
+
+            &--toggle {
+              display: block;
+              width: 10px;
+              height: 10px;
+              border-bottom: 3px;
+              border-right: 3px;
+              border-left: 0px;
+              border-top: 0px;
+              border-color: $Yellow;
+              border-style: solid;
+              transform: rotate(-135deg);
+            }
+
+            &--toggle2 {
+              display: block;
+              width: 10px;
+              height: 10px;
+              border-bottom: 3px;
+              border-right: 3px;
+              border-left: 0px;
+              border-top: 0px;
+              border-color: $Yellow;
+              border-style: solid;
+              transform: rotate(45deg);
+            }
+          }
+
+          &__context {
+            margin-top: 24px;
+            p {
+              @include Paragraph;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// RWD 375px ====================
+
+@media only screen and (max-width: 375px) {
+  #faq {
+    width: 311px;
+    // text-align: center;
+    margin-top: 180px;
+  }
+
+  .faq {
+    width: 311px;
+    margin: 0 auto;
+
+
+    &__title {
+      width: 100%;
+      @include FlexStyle;
+      justify-content: center;
+
+      h2 {
+        @include SecondaryHeading;
+        letter-spacing: -2.14286px;
+        max-width: 540px;
+        height: 48px;
+      }
+    }
+
+    &__question {      
+      margin-top: 64px;
+      margin-bottom: 20px;
+      width: 311px;
+      @include FlexStyle;
+      flex-direction: column;
+
+      &--leftside {
+        width: 311px;
+       text-align: center;
+       margin: 30px 0;
+
+        h3 {
+          @include ThirdHeading;
+          letter-spacing: -1.78571px;
+        }
+      }
+
+      &--rightside {
+        margin: 10px auto;
+        width: 311px;
+
+        .qs-blocks:hover {
+          background-color: #fff4df;
+        }
+
+        .qs-blocks {
+          max-width: 311px;
+          height: 292px;
+          padding: 32px;
+          background-color: $Snow;
+          margin: 30px;
+          overflow-wrap: break-word;
+
+          &__title {
+            @include FlexStyle;
+
+            h4 {
+              @include FourthHeading;
+              letter-spacing: -1.07143px;
+            }
+
+            &--toggle {
+              display: block;
+              width: 10px;
+              height: 10px;
+              border-bottom: 3px;
+              border-right: 3px;
+              border-left: 0px;
+              border-top: 0px;
+              border-color: $Yellow;
+              border-style: solid;
+              transform: rotate(-135deg);
+            }
+
+            &--toggle2 {
+              display: block;
+              width: 10px;
+              height: 10px;
+              border-bottom: 3px;
+              border-right: 3px;
+              border-left: 0px;
+              border-top: 0px;
+              border-color: $Yellow;
+              border-style: solid;
+              transform: rotate(45deg);
+            }
+          }
+
+          &__context {
+            margin-top: 24px;
+            p {
+              @include Paragraph;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+

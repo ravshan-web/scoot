@@ -11,3 +11,20 @@
         padding-top: 72px;
     }
 }
+
+@media only screen and (max-width:992px){
+    #intro{
+        max-width: 992px;
+        margin-top: 96px;
+        background-image: url(../../images/pictures/careers/Bitmap@2x.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 200px;
+    
+        .intro-title{
+            @include PrimaryHeading;
+            color: #fff;
+            padding-top: 72px;
+        }
+    }
+}

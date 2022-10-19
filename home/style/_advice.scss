@@ -1,43 +1,42 @@
-#advice{
+#advice {
     margin-top: 200px;
     width: 100%;
     height: 1655px;
     overflow: hidden;
 }
 
-.arrowline-1{
+.arrowline-1 {
     position: absolute;
     z-index: 99;
-    right: -200px;
+    right: -450px;
     top: 300px;
-    transform: scale(1.1);
 }
 
-.arrowline-2{
+.arrowline-2 {
     position: absolute;
     z-index: 99;
-    top: 600px;
-    left: -550px;
+    top: 550px;
+    left: -900px;
 }
 
-.arrowline-3{
+.arrowline-3 {
     position: absolute;
     z-index: 99;
-    top: 1280px;
-    right: -545px;
+    top: 1230px;
+    right: -915px;
 }
 
-.circle-1{
+.circle-1 {
     position: absolute;
     width: 445px;
     height: 445px;
     z-index: 9;
+    top: 0px;
     right: -545px;
-    // top: 10px;
     background-color: $LightGrey;
     border-radius: 50%;
 }
-.circle-2{
+.circle-2 {
     position: absolute;
     width: 445px;
     height: 445px;
@@ -47,7 +46,7 @@
     background-color: $LightGrey;
     border-radius: 50%;
 }
-.circle-3{
+.circle-3 {
     position: absolute;
     width: 445px;
     height: 445px;
@@ -58,61 +57,748 @@
     border-radius: 50%;
 }
 
-.advice{
-    width: 1106px;
-    height: 1655px;
-    @include FlexStyle;
-    flex-direction: column;
+.advice {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 215px;
+    grid-row-gap: 160px;
     position: relative;
-   
+    align-items: center;
+    grid-template-areas:
+        "context--1     img--1"
+        "img--2         context--2"
+        "context--3     img--3";
+}
 
-    .wrapper{
+.context--1 {
+    grid-area: "context--1";
+    
+}
+
+.context--2 {
+    grid-area: "context--2";
+}
+
+.context--3 {
+    grid-area: "context--3";
+}
+
+.img--1 {
+    grid-area: "img--1";
+}
+
+.img--2 {
+    grid-area: "img--2";
+}
+
+.img--3 {
+    grid-area: "img--3";
+}
+
+.context {
+    width: 445px;
+    height: 313px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
+
+    h2 {
+        @include SecondaryHeading;
+        width: 445px;
+        letter-spacing: -2.15px;
+        text-align: left;
+    }
+
+    p {
+        @include Paragraph;
+        color: $DimGrey;
+        margin-top: 24px;
+        width: 445px;
+        text-align: left;
+    }
+
+    a{
+        @include Button;
+    }
+
+    a:hover {
+        @include ButtonHover;
+    }
+}
+
+.img {
+    width: 445px;
+    height: 445px;
+    display: block;
+    border-radius: 50%;
+    overflow: hidden;
+
+    img {
         width: 100%;
-        height: 450px;
-        @include FlexStyle;
-
-        .desc{
-            max-width: 445px;
-            // max-width: 313px;
-
-            h2{
-                @include SecondaryHeading;
-                width: 445px;
-                letter-spacing: -2.15px;
-            }
-
-            p{
-                @include Paragraph;
-                color: $DimGrey;
-                margin-top: 24px;
-                width: 445px;
-                margin-bottom: 60px
-            }
-
-            a{
-                @include Button;
-                box-sizing: content-box;
-            }
-
-            a:hover{
-                @include ButtonHover;
-            }
-        }
-
-        .img{
-            width: 445px;
-            height: 445px;
-            display: inline-block;
-            border-radius: 50%;
-            overflow: hidden;
-            
-
-            img{
-                width: 100%;
-            }
-        }
     }
 }
 
 
 
+
+
+// RWD 992px ==================================================
+
+@media only screen and (max-width:992px){
+    #advice {
+        margin: 0 auto;
+        margin-top: 145px;
+        width: 100%;
+        height: 2755px;
+        overflow: hidden;
+        
+    }
+    
+    .arrowline-1 {
+        position: absolute;
+        z-index: 99;
+        right: -50px;
+        top: 300px;
+        transform: scale(1.1);
+    }
+    
+    .arrowline-2 {
+        position: absolute;
+        z-index: 99;
+        top: 950px;
+        left: -500px;
+    }
+    
+    .arrowline-3 {
+        position: absolute;
+        z-index: 99;
+        top: 1900px;
+        right: -500px;
+    }
+    
+    .circle-1 {
+        position: absolute;
+        width: 445px;
+        height: 445px;
+        z-index: 9;
+        top: 0px;
+        right: -545px;
+        background-color: $LightGrey;
+        border-radius: 50%;
+    }
+    .circle-2 {
+        position: absolute;
+        width: 445px;
+        height: 445px;
+        z-index: 9;
+        top: 600px;
+        left: -550px;
+        background-color: $LightGrey;
+        border-radius: 50%;
+    }
+    .circle-3 {
+        position: absolute;
+        width: 445px;
+        height: 445px;
+        z-index: 9;
+        top: 1210px;
+        right: -545px;
+        background-color: $LightGrey;
+        border-radius: 50%;
+    }
+    
+    .advice {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        grid-column-gap: auto;
+        grid-row-gap: 20px;
+        position: relative;
+        margin: 0 auto;
+        justify-items: center;
+        grid-template-areas:
+        "img--1"
+        "context--1"     
+        "img--2"     
+        "context--2"
+        "img--3"
+        "context--3" ;         
+              
+    }
+    
+    .context--1 {
+        grid-area: "context--1";  
+        order: 2;      
+    }
+    
+    .context--2 {
+        grid-area: "context--2";
+        order: 4;
+    }
+    
+    .context--3 {
+        grid-area: "context--3";
+        order: 6;
+    }
+    
+    .img--1 {
+        grid-area: "img--1";
+        order: 1;
+    }
+    
+    .img--2 {
+        grid-area: "img--2";
+        order: 3;
+    }
+    
+    .img--3 {
+        grid-area: "img--3";
+        order: 5;
+    }
+    
+    .context {
+        width: 445px;
+        height: 313px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+    
+        h2 {
+            @include SecondaryHeading;
+            width: 445px;
+            letter-spacing: -2.15px;
+            text-align: center;
+        }
+    
+        p {
+            @include Paragraph;
+            color: $DimGrey;
+            margin-top: 24px;
+            width: 445px;
+            text-align:center;
+        }
+    
+        a{
+            @include Button;
+        }
+    
+        a:hover {
+            @include ButtonHover;
+        }
+    }
+    
+    .img {
+        width: 445px;
+        height: 445px;
+        display: block;
+        border-radius: 50%;
+        overflow: hidden;
+    
+        img {
+            width: 100%;
+        }
+    }
+    
+}
+
+// RWD 768px ==================================================
+
+@media only screen and (max-width:768px){
+    #advice {
+        margin: 0 auto;
+        margin-top: 145px;
+        width: 100%;
+        height: 2755px;
+        overflow: hidden;
+        
+    }
+    
+    .arrowline-1 {
+        position: absolute;
+        z-index: 99;
+        right: -50px;
+        top: 300px;
+        transform: scale(1.1);
+    }
+    
+    .arrowline-2 {
+        position: absolute;
+        z-index: 99;
+        top: 950px;
+        left: -300px;
+    }
+    
+    .arrowline-3 {
+        position: absolute;
+        z-index: 99;
+        top: 1900px;
+        right: -345px;
+    }
+    
+    .circle-1 {
+        position: absolute;
+        width: 445px;
+        height: 445px;
+        z-index: 9;
+        top: 0px;
+        right: -545px;
+        background-color: $LightGrey;
+        border-radius: 50%;
+    }
+    .circle-2 {
+        position: absolute;
+        width: 445px;
+        height: 445px;
+        z-index: 9;
+        top: 600px;
+        left: -550px;
+        background-color: $LightGrey;
+        border-radius: 50%;
+    }
+    .circle-3 {
+        position: absolute;
+        width: 445px;
+        height: 445px;
+        z-index: 9;
+        top: 1210px;
+        right: -545px;
+        background-color: $LightGrey;
+        border-radius: 50%;
+    }
+    
+    .advice {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        grid-column-gap: auto;
+        grid-row-gap: 20px;
+        position: relative;
+        margin: 0 auto;
+        justify-items: center;
+        grid-template-areas:
+        "img--1"
+        "context--1"     
+        "img--2"     
+        "context--2"
+        "img--3"
+        "context--3" ;         
+              
+    }
+    
+    .context--1 {
+        grid-area: "context--1";  
+        order: 2;      
+    }
+    
+    .context--2 {
+        grid-area: "context--2";
+        order: 4;
+    }
+    
+    .context--3 {
+        grid-area: "context--3";
+        order: 6;
+    }
+    
+    .img--1 {
+        grid-area: "img--1";
+        order: 1;
+    }
+    
+    .img--2 {
+        grid-area: "img--2";
+        order: 3;
+    }
+    
+    .img--3 {
+        grid-area: "img--3";
+        order: 5;
+    }
+    
+    .context {
+        width: 445px;
+        height: 313px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+    
+        h2 {
+            @include SecondaryHeading;
+            width: 445px;
+            letter-spacing: -2.15px;
+            text-align: center;
+        }
+    
+        p {
+            @include Paragraph;
+            color: $DimGrey;
+            margin-top: 24px;
+            width: 445px;
+            text-align:center;
+        }
+    
+        a{
+            @include Button;
+        }
+    
+        a:hover {
+            @include ButtonHover;
+        }
+    }
+    
+    .img {
+        width: 445px;
+        height: 445px;
+        display: block;
+        border-radius: 50%;
+        overflow: hidden;
+    
+        img {
+            width: 100%;
+        }
+    }
+    
+}
+
+// RWD 576px ======================
+
+@media only screen and (max-width:576px){
+    #advice {
+        margin: 0 auto;
+        margin-top: 145px;
+        width: 100%;
+        height: 2655px;
+        overflow: hidden;
+        
+    }
+    
+    .arrowline-1 {
+        position: absolute;
+        z-index: 99;
+        right: -50px;
+        top: 300px;
+        transform: scale(1.1);
+    }
+    
+    .arrowline-2 {
+        position: absolute;
+        z-index: 99;
+        top: 950px;
+        left: -300px;
+    }
+    
+    .arrowline-3 {
+        position: absolute;
+        z-index: 99;
+        top: 1900px;
+        right: -345px;
+    }
+    
+    .circle-1 {
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        z-index: 9;
+        top: 0px;
+        right: -545px;
+        background-color: $LightGrey;
+        border-radius: 50%;
+    }
+    .circle-2 {
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        z-index: 9;
+        top: 600px;
+        left: -550px;
+        background-color: $LightGrey;
+        border-radius: 50%;
+    }
+    .circle-3 {
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        z-index: 9;
+        top: 1210px;
+        right: -545px;
+        background-color: $LightGrey;
+        border-radius: 50%;
+    }
+    
+    .advice {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        grid-column-gap: auto;
+        grid-row-gap: 0px;
+        position: relative;
+        margin: 0 auto;
+        justify-items: center;
+        grid-template-areas:
+        "img--1"
+        "context--1"     
+        "img--2"     
+        "context--2"
+        "img--3"
+        "context--3" ;         
+              
+    }
+    
+    .context--1 {
+        grid-area: "context--1";  
+        order: 2; 
+        margin-bottom: 120px;     
+    }
+    
+    .context--2 {
+        grid-area: "context--2";
+        order: 4;
+        margin-bottom: 120px;     
+
+    }
+    
+    .context--3 {
+        grid-area: "context--3";
+        order: 6;
+        margin-bottom: 120px;     
+
+    }
+    
+    .img--1 {
+        grid-area: "img--1";
+        order: 1;
+    }
+    
+    .img--2 {
+        grid-area: "img--2";
+        order: 3;
+    }
+    
+    .img--3 {
+        grid-area: "img--3";
+        order: 5;
+    }
+    
+    .context {
+        max-width: 320px;
+        height: 331px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+    
+        h2 {
+            @include ThirdHeading;
+            width: 320px;
+            letter-spacing: -2.15px;
+            text-align: center;
+        }
+    
+        p {
+            @include Paragraph;
+            color: $DimGrey;
+            margin-top: 24px;
+            width: 311px;
+            text-align:center;
+        }
+    
+        a{
+            @include Button;
+        }
+    
+        a:hover {
+            @include ButtonHover;
+        }
+    }
+    
+    .img {
+        width: 311px;
+        height: 311px;
+        display: block;
+        border-radius: 50%;
+        overflow: hidden;
+    
+        img {
+            width: 100%;
+        }
+    }
+    
+}
+
+
+// RWD 375px ======================
+
+@media only screen and (max-width:375px){
+    #advice {
+        margin: 0 auto;
+        margin-top: 145px;
+        width: 100%;
+        height: 2655px;
+        // overflow: hidden;
+        
+    }
+    
+    .arrowline-1 {
+        position: absolute;
+        z-index: 99;
+        right: -90px;
+        top: 300px;
+        transform: scale(1.1);
+    }
+    
+    .arrowline-2 {
+        position: absolute;
+        z-index: 99;
+        top: 1000px;
+        left: -220px;
+    }
+    
+    .arrowline-3 {
+        position: absolute;
+        z-index: 99;
+        top: 1960px;
+        right: -215px;
+    }
+    
+    .circle-1 {
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        z-index: 9;
+        top: 0px;
+        right: -545px;
+        background-color: $LightGrey;
+        border-radius: 50%;
+    }
+    .circle-2 {
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        z-index: 9;
+        top: 600px;
+        left: -550px;
+        background-color: $LightGrey;
+        border-radius: 50%;
+    }
+    .circle-3 {
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        z-index: 9;
+        top: 1210px;
+        right: -545px;
+        background-color: $LightGrey;
+        border-radius: 50%;
+    }
+    
+    .advice {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        grid-column-gap: auto;
+        grid-row-gap: 0px;
+        position: relative;
+        margin: 0 auto;
+        justify-items: center;
+        grid-template-areas:
+        "img--1"
+        "context--1"     
+        "img--2"     
+        "context--2"
+        "img--3"
+        "context--3" ;         
+              
+    }
+    
+    .context--1 {
+        grid-area: "context--1";  
+        order: 2; 
+        margin-bottom: 120px;     
+    }
+    
+    .context--2 {
+        grid-area: "context--2";
+        order: 4;
+        margin-bottom: 120px;     
+
+    }
+    
+    .context--3 {
+        grid-area: "context--3";
+        order: 6;
+        margin-bottom: 120px;     
+
+    }
+    
+    .img--1 {
+        grid-area: "img--1";
+        order: 1;
+    }
+    
+    .img--2 {
+        grid-area: "img--2";
+        order: 3;
+    }
+    
+    .img--3 {
+        grid-area: "img--3";
+        order: 5;
+    }
+    
+    .context {
+        max-width: 320px;
+        height: 331px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        
+    
+        h2 {
+            @include ThirdHeading;
+            width: 320px;
+            letter-spacing: -2.15px;
+            text-align: center;
+        }
+    
+        p {
+            @include Paragraph;
+            color: $DimGrey;
+            margin-top: 24px;
+            width: 311px;
+            text-align:center;
+        }
+    
+        a{
+            @include Button;
+        }
+    
+        a:hover {
+            @include ButtonHover;
+        }
+    }
+    
+    .img {
+        width: 311px;
+        height: 311px;
+        display: block;
+        border-radius: 50%;
+        overflow: hidden;
+    
+        img {
+            width: 100%;
+        }
+    }
+    
+}
